@@ -1,0 +1,6 @@
+[submodule "tools/pngquant"]
+	path = tools/pngquant
+	url = https://github.com/pornel/pngquant.git
+[submodule "tools/zopfli"]
+	path = tools/zopfli
+	url = https://github.com/google/zopfli.git
