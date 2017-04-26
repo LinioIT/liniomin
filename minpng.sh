@@ -5,7 +5,8 @@ then
   exit 1
 fi
 
-PNGQUANT=tools/pngquant/pngquant
-ZOFPLI=tools/zopfli/zopflipng
-$PNGQUANT --quality 60 --speed 1 --strip --output $2 $1
-$ZOFPLI -m $2 $2
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+PNGQUANT=$DIR/tools/pngquant/pngquant
+ZOFPLI=$DIR/tools/zopfli/zopflipng
+$PNGQUANT -f --quality 60 --speed 1 --strip --output $2 $1
+$ZOFPLI -m -y --lossy_transparent --lossy_8bit $2 $2
